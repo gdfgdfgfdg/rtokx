@@ -1,1 +1,11 @@
-git branch --contains render.yaml yamllint render.yaml
+services:
+  - name: okmining
+    type: web
+    env: python
+    repo: https://github.com/render-examples/flask-hello-world
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
