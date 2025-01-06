@@ -1,11 +1,8 @@
-services:
-  - name: okmining
-    type: web
-    env: python
-    repo: https://github.com/render-examples/flask-hello-world
-    branch: main
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: DATABASE_URL
-        fromDatabase:
+it checkout dev
+git pull
+git checkout prod-render-yaml
+git pull
+git checkout -b prod-render-23.02.28
+git merge dev
+// resolve conflicts very carefully!
+// open PR prod-render-23.02.28 -> prod-render-yaml
