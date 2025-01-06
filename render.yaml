@@ -1,1 +1,1 @@
-yamllint render.yaml
+git branch --contains render.yaml yamllint render.yaml
